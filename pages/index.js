@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <div className="root">
       <Head>
-        <title>GPT-3 Writer | buildspace</title>
+        <title>GPT-3 Alfred </title>
       </Head>
       <div className="container">
         <div className="header">
@@ -43,12 +43,12 @@ const Home = () => {
             <h1>Alfred</h1>
           </div>
           <div className="header-subtitle">
-            <h2>GPT-3 Powered Internet Assistant</h2>
+            <h2>GPT-3 Powered Internet Assistant by Mokhalad Aljuboori</h2>
           </div>
         </div>
         <div className="prompt-container">
           <textarea
-            placeholder="start typing here"
+            placeholder="How may I assist you"
             className="prompt-box"
             value={userInput}
             onChange={onUserChangedText}
@@ -61,11 +61,7 @@ const Home = () => {
               onClick={callGenerateEndpoint}
             >
               <div className="generate">
-                {isGenerating ? (
-                  <span className="loader"></span>
-                ) : (
-                  <p>Generate</p>
-                )}
+                {isGenerating ? <span className="loader"></span> : <p>Ask</p>}
               </div>
             </a>
           </div>
