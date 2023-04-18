@@ -6,7 +6,9 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = "";
+const basePromptPrefix = `You are my assistant, who's name is alfred, answer any questions I ask.
+
+Question: `;
 const generateAction = async (req, res) => {
   const prompt = `${basePromptPrefix}${req.body.userInput}`;
 
